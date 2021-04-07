@@ -23,7 +23,7 @@ with open(Pybank) as csv_file:
 
     # create empty lists to hold the loss/profit column and net change
     list_loss_profit = []
-    #net_change = []
+    list_net_change = []
     
     # Read through each row of data after the header
     for row in csv_reader:
@@ -41,13 +41,19 @@ with open(Pybank) as csv_file:
         # net change: list_loss_profit minus previous change
         previousvalue = list_loss_profit[0]
         net_change = int(row[1]) - previousvalue
-
+        list_net_change.append(net_change)
+#print(list_net_change)
+#size = max(list_net_change)
+#print(list_net_change)
+print(min(list_net_change))
         # average net change
-        average_net_change = net_change / count_row
+        #average_net_change = net_change / count_row
+
+
         
       
 #print calculated variables 
-print(count_row)
-print (total_amount_lossprofit)
-print(net_change)
-print(average_net_change)
+#print(count_row)
+#print (total_amount_lossprofit)
+#print(net_change)
+#print(average_net_change)
