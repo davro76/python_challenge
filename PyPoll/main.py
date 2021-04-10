@@ -27,24 +27,25 @@ with open(PyPoll) as csv_file:
     for row in csv_reader:
         count_row += 1
 
-         # assign values from column 3 to a list
-        candidates.append(row[2])
+        
     
 
         # use the set property to get unique items from candidates list
         #candidates_set = set(candidates)
         #unique_candidate_list =(list(candidates_set))
+        #print(unique_candidate_list) 
         
-        
-        
-        
-   
 
-        # all candidates list
-        
-print(candidates)
-#print(count_row)
-
+        # all candidates list    
+#print(candidates)
+print(count_row)
+ # assign values from column 3 to a list
+candidates.append(row[2])
+for i in candidates:
+    if i not in unique_candidate_list:
+        unique_candidate_list.append(i)
+print(unique_candidate_list)
+    
 
 
 
